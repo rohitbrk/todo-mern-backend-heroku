@@ -4,11 +4,12 @@ connectDb();
 const uuid = require("uuid");
 const cors = require("cors")
 
-app.use(cors())
+
 
 const app = express();
 
 app.use(express.json());
+app.use(cors())
 
 const todoRouter = require("./controllers/Todo.controller");
 app.use("/api", todoRouter);
