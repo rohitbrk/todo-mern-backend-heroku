@@ -11,7 +11,7 @@ const todoRouter = require("./controllers/Todo.controller");
 app.use("/api", todoRouter);
 
 app.get("/", (req, res) => {
-  res.json({ status: "ok" });
+  res.json({ status: "okay" });
 });
 
 const port = process.env.PORT || 5000;
