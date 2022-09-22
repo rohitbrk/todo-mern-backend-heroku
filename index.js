@@ -4,7 +4,7 @@ connectDb();
 const uuid = require("uuid");
 const cors = require("cors")
 
-express.use(cors())
+app.use(cors())
 
 const app = express();
 
