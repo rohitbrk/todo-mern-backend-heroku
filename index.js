@@ -2,6 +2,9 @@ const express = require("express");
 const connectDb = require("./services/db");
 connectDb();
 const uuid = require("uuid");
+const cors = require("cors")
+
+express.use(cors())
 
 const app = express();
 
