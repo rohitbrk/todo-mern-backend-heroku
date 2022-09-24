@@ -3,13 +3,13 @@ const connectDb = require("./services/db");
 connectDb();
 const uuid = require("uuid");
 const cors = require("cors")
-
-
-
 const app = express();
 
+var corsOptions = {
+  origin: 'http://localhost:3000/'
+}
 app.use(express.json());
-app.use(cors())
+app.use(cors(corsOptions))
 
 const todoRouter = require("./controllers/Todo.controller");
 app.use("/api", todoRouter);
