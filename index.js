@@ -5,11 +5,9 @@ const uuid = require("uuid");
 const cors = require("cors")
 const app = express();
 
-var corsOptions = {
-  origin: "https://silver-salmiakki-d62cc9.netlify.app/"
-}
+
 app.use(express.json());
-app.use(cors(corsOptions))
+app.use(cors())
 
 const todoRouter = require("./controllers/Todo.controller");
 app.use("/api", todoRouter);
