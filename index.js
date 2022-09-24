@@ -6,7 +6,7 @@ const cors = require("cors")
 const app = express();
 
 var corsOptions = {
-  origin: 'http://localhost:3000/'
+  origin: "https://silver-salmiakki-d62cc9.netlify.app/"
 }
 app.use(express.json());
 app.use(cors(corsOptions))
